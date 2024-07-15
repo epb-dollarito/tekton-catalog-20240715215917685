@@ -37,7 +37,7 @@ spec:
     # Common command params
     - name: custom-script
       description: (Optional) Filepath to a custom script that is ran prior to CRA scanning
-      default: ""
+      default: "./custom-script.sh"
     - name: env-props
       description: (Optional) A custom configuration of environment properties to source before execution, ex. 'export ABC=123 export DEF=456'
       default: ""
@@ -151,7 +151,7 @@ spec:
         - name: REGION
           value: $(params.ibmcloud-region)
         - name: CUSTOM_SCRIPT
-          value: $(params.custom-script)
+          value: "./custom-script.sh"
 
         - name: API_KEY
           valueFrom:
